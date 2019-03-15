@@ -1,0 +1,152 @@
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: rgba(0,0,0,.1);
+  border-radius: 0
+}
+
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 0;
+  background: rgba(0,0,0,.15);
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease
+}
+
+body ::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0,0,0,.15)
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: rgba(128,135,139,.8)
+}
+
+.top-line {
+
+  .uk-navbar-item {
+    min-height: 40px;
+  }
+}
+
+.footer {
+  padding: 10px 0;
+  color: #fff;
+  background: linear-gradient(90deg, #6f6f6f, #999);
+
+  .uk-subnav > * > :first-child {
+    color: #fff;
+  }
+
+  .uk-subnav > * > a {
+
+    &:hover, &:focus {
+      color: @global-primary-background;
+    }
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+  height: calc(100vh - 141px);
+  max-height: 100%;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  overflow-y: auto;
+}
+
+.button-open {
+  position: sticky;
+  top: 0;
+  left: 100%;
+  background-color: @button-primary-background;
+
+  &:hover {
+    background-color: lighten(@button-primary-background, 15%);
+  }
+}
+
+.toogle-bar {
+
+  .uk-card {
+    position: sticky;
+    top: 0;
+    max-height: calc(100vh - 161px);;
+    overflow-y: auto;
+  }
+}
+
+.select2-container {
+
+  .select2-selection--single {
+    height: 34px;
+  }
+
+  *:focus {
+    outline: none;
+  }
+}
+
+.select2-container--default {
+
+  .select2-selection--single {
+    border: 1px solid @global-border;
+    border-radius: 0;
+
+    .select2-selection__rendered {
+      padding-left: 10px;
+      color: @global-color;
+      line-height: 34px;
+    }
+
+    .select2-selection__arrow {
+      height: 32px;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 20px;
+    }
+  }
+
+  .select2-results__option[aria-selected=true] {
+    background-color: @global-secondary-background;
+  }
+
+  .select2-results__option--highlighted[aria-selected] {
+    color: @global-color;
+    background-color: @global-primary-background;
+  }
+}
+
+.select2-dropdown {
+  font-size: 0.875rem;
+  border: 1px solid @global-border;
+  border-radius: 0;
+}
+
+@media (max-width: 959px) {
+
+  .button-open {
+    position: static;
+  }
+}
+
+@media (max-width: 639px) {
+
+  .top-line {
+
+
+    .uk-button-group {
+      flex-wrap: wrap;
+    }
+  }
+
+  .toogle-bar .uk-card {
+    max-height: 100%;
+  }
+}

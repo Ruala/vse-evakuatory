@@ -9,5 +9,567 @@
 </head>
 <body>
 
+<div class="uk-offcanvas-content">
+    <div class="uk-child-width-1-1 uk-height-viewport uk-flex uk-flex-column uk-flex-between">
+        <!--Header-->
+        <header class="header uk-navbar-container">
+            <nav uk-navbar>
+                <div class="uk-navbar-left">
+                    <!--logo-->
+                    <a class="uk-navbar-item uk-logo" href="/">vse-evakuatory.ru</a>
+                </div>
+
+                <div class="uk-navbar-right">
+                    <!--mobile menu toggle-->
+                    <a href="#offcanvas-overlay" class="uk-navbar-toggle"
+                       uk-navbar-toggle-icon uk-toggle>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <!--Filter-->
+        <div class="top-line uk-background-default">
+            <nav uk-navbar>
+                <div class="uk-navbar-left uk-visible@s">
+                    <div class="uk-navbar-item uk-button-group">
+                        <button class="uk-button uk-button-small uk-button-default">Округ</button>
+                        <button class="uk-button uk-button-small uk-button-default">Метро</button>
+                        <button class="uk-button uk-button-small uk-button-default">Подммосковье</button>
+                        <button class="uk-button uk-button-small uk-button-default">Тип</button>
+                    </div>
+                </div>
+
+                <div class="uk-navbar-right uk-width-1-1 uk-width-auto@s uk-hidden@m">
+                    <div class="uk-navbar-item uk-width-expand uk-hidden@s">
+                        <select>
+                            <option>Округ</option>
+                            <option>Метро</option>
+                            <option>Подммосковье</option>
+                            <option>Тип</option>
+                        </select>
+                    </div>
+
+                    <div class="uk-navbar-item">
+                        <button class="button-open uk-button uk-active" type="button" uk-toggle="target: #toogle-bar; animation: uk-animation-fade">Toggle</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--Main-->
+        <div class="main uk-position-relative">
+            <!--Sidebar-->
+            <div class="sidebar uk-flex uk-height-1-1">
+
+                <div class="sidebar__inner uk-flex uk-position-relative uk-position-z-index">
+                    <div class="uk-container uk-container-expand">
+                        <div class="uk-flex uk-flex-top uk-position-relative">
+                            <div class="uk-grid-small" uk-grid>
+                                <!-- Calculator -->
+                                <div id="toogle-bar" class="toogle-bar uk-width-medium uk-flex-last@s">
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-text-center">Вызвать эвакуатор</h4>
+                                        <form>
+                                            <div class="uk-margin">
+                                                <select>
+                                                    <option>Легковой автомобиль</option>
+                                                    <option>Внедорожник</option>
+                                                    <option>Коммерческий транспорт</option>
+                                                    <option>Мотоцикл</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="uk-margin">
+                                                <h6 class="uk-text-bold uk-margin-small">Откуда</h6>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" placeholder="From">
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <h6 class="uk-text-bold uk-margin-small">Куда</h6>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" placeholder="To">
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <h6 class="uk-text-bold uk-margin-small">Ваш телефон</h6>
+                                                <div class="uk-margin-small">
+                                                    <input class="uk-input" type="text" name="phone" placeholder="+7 ( ___ ) ___ - __ - __">
+                                                </div>
+                                            </div>
+
+                                            <div class="uk-margin">
+                                                <h6 class="uk-text-bold uk-margin-small">Сколько колес заблокировано?</h6>
+                                                <div class="uk-margin-small uk-grid-small uk-child-width-auto uk-grid">
+                                                    <label><input class="uk-radio" type="radio" name="radio2" checked> 0</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 1</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 2</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 3</label>
+                                                    <label><input class="uk-radio" type="radio" name="radio2"> 4</label>
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin-medium-bottom">
+                                                <div class="uk-margin-small">
+                                                    <label><input class="uk-checkbox" type="checkbox"> Руль заблокирован</label>
+                                                </div>
+                                                <div class="uk-margin-small">
+                                                    <label><input class="uk-checkbox" type="checkbox"> КПП заблокирована</label>
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <div class="uk-margin-small">
+                                                    <label><input class="uk-checkbox" type="checkbox"> <span>Скидка 10%</span> по предварительному заказу</label>
+                                                </div>
+                                            </div>
+                                            <div class="uk-margin">
+                                                <div class="uk-margin-small uk-flex-bottom" uk-grid>
+                                                    <div>
+                                                        <h5 class="uk-text-bold uk-margin-remove">Сумма:</h5>
+                                                    </div>
+                                                    <div>
+                                                        <div class="uk-text-bold">3 000 руб.</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="uk-text-small uk-text-muted">* Окончательную стоимость перевозки уточняйте у диспетчеров</div>
+                                            </div>
+
+                                            <div class="uk-margin uk-text-center">
+                                                <button class="uk-button uk-button-primary uk-width-1-1">Заказать</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="uk-width-medium uk-position-relative uk-position-z-index" uk-margin="margin: uk-margin-top">
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="uk-card uk-card-small uk-card-default uk-card-hover uk-card-body">
+                                        <h4 class="uk-card-title uk-margin-remove-bottom">м. Киевская</h4>
+                                        <div>
+                                            <a class="uk-h4 uk-link-reset" href="tel:+79637828325">+7 <span class="uk-text-primary">(963)</span> 782-83-25</a>
+                                        </div>
+
+
+                                        <div class="uk-child-width-expand uk-grid-small uk-flex-between uk-text-small uk-margin" uk-grid>
+                                            <div>
+                                                <div>Мерседес 711, 5.0т.</div>
+                                                <div>Обычный с лебедкой</div>
+                                            </div>
+                                            <div class="uk-width-auto">
+                                                <div class="uk-flex uk-flex-middle uk-text-muted">
+                                                    <i class="uk-margin-small-right far fa-clock"></i>
+                                                    <span>с 9 до 20</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-grid-small uk-flex-middle uk-flex-between  uk-margin" uk-grid>
+                                            <div>
+                                                <div class="uk-text-primary">Цена от 2000 руб</div>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="uk-button uk-button-text">More <i class="fas fa-angle-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button class="button-open uk-button uk-active uk-visible@m" type="button" uk-toggle="target: #toogle-bar; animation: uk-animation-fade">Toggle</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Map-->
+            <div id="map" class="map uk-position-cover">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A49f4cc0e485f50a820606b1fb0bd6db8202df0e0ade268436b2fecb88ee637f2&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class="uk-container">
+                <div class="uk-child-width-auto@m uk-grid-small uk-flex-middle uk-flex-between" uk-grid>
+                    <div>
+                        <div class="uk-text-small uk-text-center">© 2019 copyright Все права защищены</div>
+                    </div>
+
+                    <div class="uk-visible@m">
+                        <ul class="uk-subnav uk-margin-remove">
+                            <li>
+                                <a href="#">эвакуаторы область</a>
+                            </li>
+                            <li>
+                                <a href="#">эвакуаторы по округам</a>
+                            </li>
+                            <li>
+                                <a href="#">эвакуаторы по району</a>
+                            </li>
+                            <li>
+                                <a href="#">эвакуаторы по метро</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Off-canvas -->
+    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <div class="uk-card uk-card-small uk-card-body">
+                <div uk-margin>
+
+                    <ul class="uk-nav-parent-icon" uk-nav>
+                        <li class="uk-active"><a href="#">Главная</a></li>
+                        <li class="uk-parent">
+                            <a href="#">Услуги эвакуатора</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт выпадающего меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Пункт меню</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт выпадающего меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Пункт меню</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт выпадающего меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Пункт меню</a>
+                            <ul class="uk-nav-sub">
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                                <li><a href="#">Пункт выпадающего меню</a></li>
+                                <li><a href="#">Пункт меню</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Пункт меню</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
